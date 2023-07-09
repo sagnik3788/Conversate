@@ -1,4 +1,4 @@
-#<h1>Conversate</h1>
+<h1>Conversate</h1>
 
 <p>This is a chat app that is currently under development. It is a simple web app that allows users to chat with each other in real time.</p>
 
