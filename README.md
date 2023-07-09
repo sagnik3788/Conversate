@@ -32,10 +32,4 @@
 <li>Submit a pull request.</li>
 </ol>
 
-<h2>License</h2>
 
-<p>The chat app is licensed under the MIT License.</p>
-
-<h2>Contact</h2>
-
-<p>If you have any questions or suggestions, please contact the project maintainers at <a href="mailto:[email protected]">[email protected]</a>.</p>
