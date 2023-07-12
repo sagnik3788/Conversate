@@ -1,23 +1,25 @@
-const socket=io()
+const socket = io()
 
-socket.on('messageUpdate',(messages)=>{
-    console.log(messages)
+socket.on('message', (message) => {
+    console.log(message)
 })
 
-
-document.querySelector('#message-form').addEventListener('submit',(e)=>{
+document.querySelector('#message-form').addEventListener('submit', (e) => {
     e.preventDefault()
-    
-    const message=document.querySelector('input').value
 
-    socket.emit('sendMessage',message)
+    const message =e.target.elements.message.value
+
+    socket.emit('sendMessage', message)
 })
-
-// socket.on('countUpdated',(count)=>{
-//     console.log('The count has been updated',count)
-// })
-
-// document.querySelector('#btn').addEventListener('click',()=>{
-//     console.log('clicked')
-//     socket.emit('btn')
-// })
+document.querySelector('#Send-location').addEventListener('click',()=>{
+    if(!navigator.geolocation){
+        return  alert('Geolocation not supported by your browswer')
+    }
+    navigator.geolocation.getCurrentPosition((position)=>{
+        console.log(position)
+        socket.emit('sendLocation',{
+        longitude:position.coords.longitude,
+        latitude:position.coords.latitude
+        })
+    })
+})
