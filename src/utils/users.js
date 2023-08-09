@@ -52,4 +52,6 @@ module.exports = {
     removeUser,
     getUser,
     getUsersInRoom
+
 }
+

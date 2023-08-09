@@ -1,3 +1,4 @@
+
 const socket = io()
 
 
@@ -110,4 +111,7 @@ socket.emit('join', { username, room }, (error) => {
         alert(error)
         location.href = '/'
     }
+
 })
+
+
