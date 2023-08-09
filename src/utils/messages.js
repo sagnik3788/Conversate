@@ -17,8 +17,6 @@ const generateLocationMessage = (username, url) => {
 module.exports = {
     generateMessage,
     generateLocationMessage
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> 3f1c521f051300b406fc13abd647bedfccc27ba9
+
