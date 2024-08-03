@@ -53,3 +53,20 @@ variable "iam_role_node_arn" {
   description = "ARN of the IAM role for the EKS node group"
   type        = string
 }
+
+# variable "ami_id" {
+#   description = "AMI ID for the jenkins instamce"
+#   type = string
+# }
+
+variable "instance_type" {
+  description = "Instance type for the jenkins instamce"
+  type = string
+}
+
+variable "key_name" {
+  description = "key name for the jenkins instance"
+  type = string
+}
+
+

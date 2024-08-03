@@ -17,3 +17,8 @@ node_min_size     = 1
 
 iam_role_eks_arn  = "arn:aws:iam::151134196195:role/aws-service-role/eks.amazonaws.com/AWSServiceRoleForAmazonEKS"
 iam_role_node_arn = "arn:aws:iam::151134196195:role/aws-service-role/eks-nodegroup.amazonaws.com/AWSServiceRoleForAmazonEKSNodegroup"
+
+instance_type = "t2.micro"
+
+key_name = "key-pair"
+
