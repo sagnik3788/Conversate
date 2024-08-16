@@ -5,9 +5,18 @@ pipeline {
         DOCKER_IMAGE = "sagnik3788/conversate"
         DOCKER_TAG = "${BUILD_NUMBER}"
         KUBECONFIG = credentials('eks-kubeconfig')
+        AWS_ACCESS_KEY_ID = credentials('aws-access-key-id')  // Add your AWS Access Key ID
+        AWS_SECRET_ACCESS_KEY = credentials('aws-secret-access-key')  // Add your AWS Secret Access Key
+        AWS_DEFAULT_REGION = 'us-west-2'  // Specify your AWS region
     }
     
     stages {
+
+         stage('Checkout') {
+            steps {
+                git credentialsId: 'git-credentials-id', url: 'https://github.com/sagnik3788/Conversate'
+            }
+        }
         stage('Build Docker Image') {
             steps {
                 script {
