@@ -13,6 +13,8 @@ A simple yet powerful real-time chat web app for seamless conversations.
 - 📜 **Autoscroll**: Automatic scrolling to the latest messages, ensuring a smooth conversation flow.
 - 😊 **Emoji Support**: Express yourself with emojis in your messages.
 - 📎 **File Sharing** *(Coming Soon)*: Share documents, images, and other files within the chat.
+- 🚀 **Deployment Options**: Easily deploy your application using **Terraform** and **Amazon EKS**.
+- 🔒 **Scalability**: Designed to scale effortlessly with containerization.
 
 ## **Tech Stack** ⚙️  
 Conversate leverages the following technologies to provide a seamless experience:
@@ -27,6 +29,14 @@ Conversate leverages the following technologies to provide a seamless experience
   - ⚡ **Socket.io** for real-time communication  
   - 🚀 Express.js (Node.js) as the server framework  
 
+- **Cloud Infrastructure**:  
+  - ☁️ **Amazon Web Services (AWS)** for hosting and cloud services  
+  - 🛠️ **Terraform** for infrastructure as code (IaC)  
+
+- **Containerization**:  
+  - 🐳 **Docker** for creating lightweight, portable containers  
+  - 📦 **Amazon EKS** for orchestrating containerized applications  
+
 - **Other Integrations**:  
   - 🌍 **Geolocation API** for sharing location data  
   - 🛠️ **Qs** for parsing query strings
@@ -37,7 +47,7 @@ To get started with Conversate on your local machine, follow these steps:
 
 ### **Prerequisites** 📋
 
-Make sure you have [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.com/) installed on your machine.
+Make sure you have [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.com/) installed on your machine. Additionally, for deployment, ensure you have access to AWS with the necessary permissions.
 
 ### **Installation** 💻
 
@@ -73,6 +83,30 @@ Make sure you have [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.co
    - 📝 Send messages to everyone in the room.
    - 🌍 Share your location by clicking the "Send Location" button.
    - 👥 View a real-time list of users currently in the room on the sidebar.
+
+## **Deployment** 🌐
+
+### **Using Terraform and EKS**
+
+1. **Set Up AWS Credentials**  
+   Ensure your AWS CLI is configured with the necessary credentials:
+   ```bash
+   aws configure
+   ```
+
+2. **Install Terraform**  
+   Follow the instructions on the [Terraform website](https://www.terraform.io/downloads.html) to install Terraform.
+
+3. **Deploy the Infrastructure**  
+   Navigate to the `terraform` directory and run the following commands:
+   ```bash
+   cd terraform
+   terraform init
+   terraform apply
+   ```
+
+4. **Access the Application**  
+   After deployment, you will receive the URL to access your application hosted on EKS.
 
 ## **Folder Structure** 📁  
 ```
